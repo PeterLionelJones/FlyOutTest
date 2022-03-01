@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+       xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+       xmlns:flyOutTest="clr-namespace:FlyOutTest;assembly=FlyOutTest"
+       xmlns:generic="clr-namespace:System.Collections.Generic;assembly=netstandard"
+       x:Class="FlyOutTest.AppShell"
+       FlyoutBackgroundColor="Black">
+
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="0,60,0,20"  
+                     BackgroundColor="Black">
+
+            <Label 
+                Margin="30,0,30,0"
+                HeightRequest="40" 
+                Text="Combo Box 1:" 
+                TextColor="White"
+                VerticalTextAlignment="End"/>
+            
+            <combobox:SfComboBox 
+                ShowClearButton="false" 
+                HeightRequest="40"
+                Margin="30,0,30,0"
+                MultiSelectMode="None">
+                
+                <combobox:SfComboBox.DataSource>
+                    <generic:List x:TypeArguments="x:String">
+                        <x:String>Item 1</x:String>
+                        <x:String>Item 2</x:String>
+                        <x:String>Item 3</x:String>
+                        <x:String>Item 4</x:String>
+                    </generic:List>
+                </combobox:SfComboBox.DataSource>
+                
+            </combobox:SfComboBox>
+            
+            <buttons:SfButton
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="LightGray"
+                FontAttributes="Italic"
+                FontSize="Body"
+                HorizontalTextAlignment="Start"
+                Margin="30,30,30,0"
+                Padding="10"
+                Text="Button 1"
+                TextColor="Black" />
+
+            
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Label HeightRequest="0"/>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    
+    <ShellItem Route="Pages">
+        <ShellContent Route="Main">
+            <flyOutTest:MainPage x:Name="MainPage"/>
+        </ShellContent>
+    </ShellItem>
+
+</Shell>

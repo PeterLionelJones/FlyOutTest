@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.4.0.54" />
+        <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.4.0.54" />
+        <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.4.0.54" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="AppShell.xaml.cs">
+        <DependentUpon>AppShell.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>
