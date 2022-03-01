@@ -1,3 +1,5 @@
+Running iOS 15.2 on iOS Simulator, Android 11 on Android Simulator
+
 #ISSUE #1
 
 Click/tap on ComboBox
